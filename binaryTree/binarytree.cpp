@@ -31,6 +31,7 @@ node* buildTree(node* root){
     return root;
 
 }
+
 void levelordertraversal(node* root) {
     if (root == NULL) return; // Handle empty tree
     
@@ -58,7 +59,16 @@ void levelordertraversal(node* root) {
         }
     }
 }
-
+void heightt(struct node* node){
+    if(node==NULL){
+        return 0;
+    }
+    int left = heightt(node -> left);
+    int right = heightt(node->right);
+    int ans = max(left,right)+1;
+    return ans;
+ 
+}
 
 int main(){
     node* root = NULL;
