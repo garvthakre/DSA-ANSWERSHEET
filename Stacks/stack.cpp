@@ -1,5 +1,5 @@
 #include<iostream>
-#include<stack>
+#include<stdlib.h>
 using namespace std;
 
 class Stack {
